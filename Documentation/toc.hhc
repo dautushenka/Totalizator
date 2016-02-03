@@ -1,0 +1,116 @@
+<HTML>
+ <HEAD>
+  <META name="GENERATOR" content="htm2chm 3.0.9.3">
+  <!-- Sitemap 1.0 -->
+ </HEAD>
+<BODY>
+ <OBJECT type="text/site properties">
+  <PARAM name="Window Styles" value="0x800027">
+ </OBJECT>
+<UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="Totalizator(&Ograve;&icirc;&ograve;&agrave;&euml;&egrave;&ccedil;&agrave;&ograve;&icirc;&eth;)">
+  <PARAM name="Local" value="index.html">
+  <PARAM name="ImageNumber" value="37">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Oacute;&ntilde;&ograve;&agrave;&iacute;&icirc;&acirc;&ecirc;&agrave;">
+  <PARAM name="Local" value="install/index.html">
+ </OBJECT>
+<UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value=".htaccess">
+  <PARAM name="Local" value="install/.htaccess.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="index.php">
+  <PARAM name="Local" value="install/index.php.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="engine/engine.php">
+  <PARAM name="Local" value="install/engine.php.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="engine/modules/profile.php">
+  <PARAM name="Local" value="install/profile.php.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="/template/{&acirc;&agrave;&oslash; &oslash;&agrave;&aacute;&euml;&icirc;&iacute;}/main.tpl">
+  <PARAM name="Local" value="install/main.tpl.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="/template/{&acirc;&agrave;&oslash; &oslash;&agrave;&aacute;&euml;&icirc;&iacute;}/userinfo.tpl">
+  <PARAM name="Local" value="install/userinfo.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Auml;&Euml;&Aring; &acirc;&aring;&eth;&ntilde;&egrave;&egrave; 8.0">
+ </OBJECT>
+<UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="admin.php">
+  <PARAM name="Local" value="install/after_8.0/admin.php.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="engine/inc/options.php">
+  <PARAM name="Local" value="install/after_8.0/options.php.html">
+ </OBJECT>
+</UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Auml;&Euml;&Aring; &acirc;&aring;&eth;&ntilde;&egrave;&egrave; &iacute;&egrave;&aelig;&aring; 8.0">
+ </OBJECT>
+<UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="admin.php">
+  <PARAM name="Local" value="install/before_8.0/admin.php.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="engine/inc/options.php">
+  <PARAM name="Local" value="install/before_8.0/options.php.html">
+ </OBJECT>
+</UL>
+</UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Icirc;&aacute;&iacute;&icirc;&acirc;&euml;&aring;&iacute;&egrave;&aring;">
+  <PARAM name="Local" value="update/index.html">
+ </OBJECT>
+<UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="2.0.0">
+ </OBJECT>
+<UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value=".htaccess">
+  <PARAM name="Local" value="update/2.0.0/.htaccess.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="engine/modules/profile.php">
+  <PARAM name="Local" value="update/2.0.0/profile.php.html">
+ </OBJECT>
+</UL>
+</UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Egrave;&ntilde;&iuml;&icirc;&euml;&uuml;&ccedil;&icirc;&acirc;&agrave;&iacute;&egrave;&aring;">
+ </OBJECT>
+<UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Ntilde;&ntilde;&ucirc;&euml;&ecirc;&egrave;">
+  <PARAM name="Local" value="Using/links.html">
+ </OBJECT>
+</UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="FAQ">
+  <PARAM name="Local" value="FAQ/FAQ.html">
+  <PARAM name="ImageNumber" value="9">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="ChangeLog">
+  <PARAM name="Local" value="changelog.html">
+  <PARAM name="ImageNumber" value="11">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Ecirc;&icirc;&iacute;&ograve;&agrave;&ecirc;&ograve;&ucirc;">
+  <PARAM name="Local" value="contact.html">
+  <PARAM name="ImageNumber" value="13">
+ </OBJECT>
+</BODY>
+</HTML>

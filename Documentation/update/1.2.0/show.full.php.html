@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Обновление &raquo; 1.2.0 &raquo; engine/modules/show.full.php &raquo; KALIOSTRO.NET</title>
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body><script language="javascript">
+		if ((window.name != "content") && (navigator.userAgent.indexOf("Opera") <= -1) )
+		document.write("<center><a href='../../index.html?page=update/1.2.0/show.full.php.html'>show framing</a></center>")
+		</script>
+<div id='wraper'>
+<div class="header_background">
+	<div class="header_div">
+		<div class="module_name">
+			Totalizator(Тотализатор) <span>v2.0.0</span>
+		</div>
+        <div class="navagation">
+        	Обновление &raquo; 1.2.0 &raquo; engine/modules/show.full.php
+        </div>
+	</div>
+</div>
+<div class="content">
+<!-- Copyright (c) 2008 - 2011 www.kaliostro.net. All rights reserved. # --><div class="action_div">		<b>1.</b> Обрабатываем платный текст в новости<br/>
+		<span class="action_title">Найти</span> (501-505):<br />
+		<textarea cols="auto" rows="36" class="find" readonly="readonly">///////////////////////////////////////////////////////////////
+#*************** Paid Links ************
+///////////////////////////////////////////////////////////////
+	require(ROOT_DIR . "/language/".$config['langs']."/paid_links.lng");
+    require(ENGINE_DIR . "/data/paid_links_conf.php");
+	if ($is_logged &amp;&amp; preg_match('#\[pay=([0-9]+):([0-9]+)\](.*?)\[/pay\]#si', $row['full_story'], $matches))
+    {
+    	if ($links = $db->super_query("SELECT * FROM " . PREFIX . "_links WHERE user_id='$member_id[user_id]' AND news_id='$row[id]' AND (date_exp > $_TIME OR date_exp=0) ORDER BY date_activ DESC LIMIT 1"))
+    	{
+    		$row['full_story'] = preg_replace('#\[pay=([0-9]+):([0-9]+)\](.*?)\[/pay\]#si', "<div id='pay' class=\"quote\">"."\3"."</div>", $row['full_story']);
+    	}
+    	elseif ($member_id['block_purse'])
+    		$row['full_story'] = preg_replace('#\[pay=([0-9]+):([0-9]+)\](.*?)\[/pay\]#si',  "<div id='pay' class=\"quote\">".$lang_paid_links['block_purse']."</div>", $row['full_story']);
+    	elseif (floatval($matches[1]) > $member_id['purse'])
+    		$row['full_story'] = preg_replace('#\[pay=([0-9]+):([0-9]+)\](.*?)\[/pay\]#si',  "<div id='pay' class=\"quote\">".$lang_paid_links['few'].$matches[1]."</div>", $row['full_story']);
+    	else
+    	{
+    		if ($config['allow_alt_url'] == "yes")
+    			$row['full_story'] = preg_replace('#\[pay=([0-9]+):([0-9]+)\](.*?)\[/pay\]#si', "<div id='pay' class=\"quote\">".$lang_paid_links['hide_txt'] . $matches[1] . " <a OnClick='buy($row[id]);return false;' href='".$config['http_home_url']."mylinks/add-".$row['id'].".html"."' >" .$lang_paid_links['buy']. "</a>"."</div>", $row['full_story']);
+    		else
+    			$row['full_story'] = preg_replace('#\[pay=([0-9]+):([0-9]+)\](.*?)\[/pay\]#si', "<div id='pay' class=\"quote\">".$lang_paid_links['hide_txt'] . $matches[1] . " <a OnClick='buy($row[id]);return false;' href='$php_self?do=mylinks&amp;add=$row[id]' >" .$lang_paid_links['buy']. "</a>"."</div>", $row['full_story']);
+    	}
+    }
+    else 
+    	$row['full_story'] = preg_replace('#\[pay=([0-9]+):([0-9]+)\](.*?)\[/pay\]#si', "<div id='pay' class=\"quote\">".$lang_paid_links['need_auth']."", $row['full_story']);
+////////////////////////////////////////////////////////////////
+#*************** Paid Links ************
+/////////////////////////////////////////////////////////////////</textarea>		
+		<span class="action_title">Заменить на</span> :<br />
+		<textarea cols="auto" rows="4" class="replace" readonly="readonly">/* ----------- Totalizator(Тотализатор) v2.0.0 ----------- */
+require(ENGINE_DIR . "/paidlinks/functions.php");
+ParsePay($row['full_story'], $row['id']);
+/* ----------- Totalizator(Тотализатор) v2.0.0 ----------- */</textarea></div>
+</div>
+</div>
+<div class="footer">
+<hr />
+Copyright &copy; 2008 - 2011 <a style="color:green" href="http://www.kaliostro.net/">kaliostro</a> . All rights reserved.<!-- Copyright (c) 2008 - 2011 www.kaliostro.net. All rights reserved. # -->
+</div>
+</body>
+</html>

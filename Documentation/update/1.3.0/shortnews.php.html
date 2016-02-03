@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Обновление &raquo; 1.3.0 &raquo; engine/editor/shortnews.php &raquo; KALIOSTRO.NET</title>
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body><script language="javascript">
+		if ((window.name != "content") && (navigator.userAgent.indexOf("Opera") <= -1) )
+		document.write("<center><a href='../../index.html?page=update/1.3.0/shortnews.php.html'>show framing</a></center>")
+		</script>
+<div id='wraper'>
+<div class="header_background">
+	<div class="header_div">
+		<div class="module_name">
+			Totalizator(Тотализатор) <span>v2.0.0</span>
+		</div>
+        <div class="navagation">
+        	Обновление &raquo; 1.3.0 &raquo; engine/editor/shortnews.php
+        </div>
+	</div>
+</div>
+<div class="content">
+<!-- Copyright (c) 2008 - 2011 www.kaliostro.net. All rights reserved. # --><div class="action_div">		<b>1.</b> Добавляем кнопку для ссылки в визуальный редактор. Работает на версиях ДЛЕ 7.2 и выше<br/>
+		<span class="action_title">Найти</span> (65):<br />
+		<textarea cols="auto" rows="2" class="find" readonly="readonly">		theme_advanced_buttons1 : "fullscreen,|,cut,copy,|,paste,pastetext,pasteword,|,search,replace,|,outdent,indent,|,undo,redo,|,link,dle_leech,|,dle_upload,image,media,dle_mp,dle_mp3,emotions,dle_spoiler,|,nonbreaking,dle_quote,dle_hide,dle_code,dle_break,dle_page",</textarea>		
+		<span class="action_title">Заменить на</span> :<br />
+		<textarea cols="auto" rows="4" class="replace" readonly="readonly">/* ----------- Totalizator(Тотализатор) v2.0.0 ----------- */
+		theme_advanced_buttons1 : "fullscreen,|,cut,copy,|,paste,pastetext,pasteword,|,search,replace,|,outdent,indent,|,undo,redo,|,link,dle_leech,|,dle_upload,paidlinks,image,media,dle_mp,dle_mp3,emotions,dle_spoiler,|,nonbreaking,dle_quote,dle_hide,dle_code,dle_break,dle_page",
+/* ----------- Totalizator(Тотализатор) v2.0.0 ----------- */</textarea></div><div class="action_div">		<b>2.</b> Добавляем кнопку для ссылки в визуальный редактор. Работает на версиях ДЛЕ 7.2 и выше<br/>
+		<span class="action_title">Найти</span> (151-157):<br />
+		<textarea cols="auto" rows="10" class="find" readonly="readonly">			ed.addButton('dle_upload', {
+			title : 'Загрузка файлов на сервер',
+			image : '{$config['http_home_url']}engine/editor/jscripts/tiny_mce/themes/advanced/img/dle_upload.gif',
+			onclick : function() {
+
+				window.open('?mod=files&amp;action=quick&amp;area=short_story&amp;wysiwyg=yes&amp;author={$row['autor']}&amp;news_id={$row['id']}', '_Addimage', 'toolbar=0,location=0,status=0, left=0, top=0, menubar=0,scrollbars=yes,resizable=0,width=640,height=550');
+			}
+	           });</textarea>		
+		<span class="action_title">Ниже добавить</span> :<br />
+		<textarea cols="auto" rows="15" class="add" readonly="readonly">/* ----------- Totalizator(Тотализатор) v2.0.0 ----------- */
+	    ed.addButton('paidlinks', {
+			title : 'Платная ссылка',
+			image : '{$config['http_home_url']}engine/paidlinks/images/paid_links_w.jpg',
+			onclick : function() {
+
+				var cost   = prompt("Стоиомсть ссылки");
+				if (cost == null) cost = "0";
+				var days   = prompt("Количество дней доступа");
+				if (days == null) days = "0";
+				ed.execCommand('mceReplaceContent',false,'[pay=' + cost + ":" + days + ']{$selection}[/pay]');
+			}
+	           });
+/* ----------- Totalizator(Тотализатор) v2.0.0 ----------- */</textarea></div>
+</div>
+</div>
+<div class="footer">
+<hr />
+Copyright &copy; 2008 - 2011 <a style="color:green" href="http://www.kaliostro.net/">kaliostro</a> . All rights reserved.<!-- Copyright (c) 2008 - 2011 www.kaliostro.net. All rights reserved. # -->
+</div>
+</body>
+</html>

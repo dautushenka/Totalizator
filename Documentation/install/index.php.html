@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Установка &raquo; index.php &raquo; KALIOSTRO.NET</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body><script language="javascript">
+		if ((window.name != "content") && (navigator.userAgent.indexOf("Opera") <= -1) )
+		document.write("<center><a href='../index.html?page=install/index.php.html'>show framing</a></center>")
+		</script>
+<div id='wraper'>
+<div class="header_background">
+	<div class="header_div">
+		<div class="module_name">
+			Totalizator(Тотализатор) <span>v2.0.0</span>
+		</div>
+        <div class="navagation">
+        	Установка &raquo; index.php
+        </div>
+	</div>
+</div>
+<div class="content">
+<!-- Copyright (c) 2008 - 2011 www.kaliostro.net. All rights reserved. # --><div class="action_div">		<b>1.</b> Даёт возможность вывода блоков на сайт<br/>
+		<span class="action_title">Найти</span> (44):<br />
+		<textarea cols="auto" rows="1" class="find" readonly="readonly">require_once ROOT_DIR.'/engine/init.php';</textarea>		
+		<span class="action_title">Ниже добавить</span> :<br />
+		<textarea cols="auto" rows="3" class="add" readonly="readonly">/* ----------- Totalizator(Тотализатор) v2.0.0 ----------- */
+include ENGINE_DIR . "/totalizator/blocks.php";
+/* ----------- Totalizator(Тотализатор) v2.0.0 ----------- */</textarea></div><div class="action_div">		<b>2.</b> Вставляем данные блоков в теги шаблона main.tpl<br/>
+		<span class="action_title">Найти</span> (47):<br />
+		<textarea cols="auto" rows="1" class="find" readonly="readonly">	$tpl->load_template('main.tpl');</textarea>		
+		<span class="action_title">Ниже добавить</span> :<br />
+		<textarea cols="auto" rows="5" class="add" readonly="readonly">/* ----------- Totalizator(Тотализатор) v2.0.0 ----------- */
+	$tpl->set("{PredictedMatche}" , $tpl->result['PredictedMatche']);
+    $tpl->set("{NotPredictedMatche}" , $tpl->result['NotPredictedMatche']);
+    $tpl->set("{RatesUsers}" , $tpl->result['RatesUsers']);
+/* ----------- Totalizator(Тотализатор) v2.0.0 ----------- */</textarea></div>
+</div>
+</div>
+<div class="footer">
+<hr />
+Copyright &copy; 2008 - 2011 <a style="color:green" href="http://www.kaliostro.net/">kaliostro</a> . All rights reserved.<!-- Copyright (c) 2008 - 2011 www.kaliostro.net. All rights reserved. # -->
+</div>
+</body>
+</html>

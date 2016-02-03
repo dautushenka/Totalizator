@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Обновление &raquo; 1.3.0 &raquo; .htaccess &raquo; KALIOSTRO.NET</title>
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body><script language="javascript">
+		if ((window.name != "content") && (navigator.userAgent.indexOf("Opera") <= -1) )
+		document.write("<center><a href='../../index.html?page=update/1.3.0/.htaccess.html'>show framing</a></center>")
+		</script>
+<div id='wraper'>
+<div class="header_background">
+	<div class="header_div">
+		<div class="module_name">
+			Totalizator(Тотализатор) <span>v2.0.0</span>
+		</div>
+        <div class="navagation">
+        	Обновление &raquo; 1.3.0 &raquo; .htaccess
+        </div>
+	</div>
+</div>
+<div class="content">
+<!-- Copyright (c) 2008 - 2011 www.kaliostro.net. All rights reserved. # --><div class="action_div">		<b>1.</b> Делает возможным использование ЧПУ в ссылках<br/>
+		<span class="action_title">Найти</span> (3):<br />
+		<textarea cols="auto" rows="7" class="find" readonly="readonly">RewriteRule ^mylinks.html$ index.php?do=mylinks [L]
+RewriteRule ^mylinks/vip.html$ index.php?do=mylinks&amp;vip [L]
+RewriteRule ^mylinks/log.html$ index.php?do=mylinks&amp;showlog [L]
+RewriteRule ^mylinks/add-([0-9]+).html$ index.php?do=mylinks&amp;add=$1 [L]
+RewriteRule ^pay.html$ index.php?do=pay [L]
+RewriteRule ^download.html(.*)$ engine/paidlinks/download.php$1 [L]
+</textarea>		
+		<span class="action_title">Заменить на</span> :<br />
+		<textarea cols="auto" rows="10" class="replace" readonly="readonly">RewriteRule ^mylinks(\.html|/)?$ index.php?do=mylinks [L]
+RewriteRule ^mylinks/vip(\.html|/)?$ index.php?do=mylinks&amp;vip [L]
+RewriteRule ^mylinks/log(\.html|/)?$ index.php?do=mylinks&amp;showlog [L]
+RewriteRule ^mylinks/add-([0-9]+).html$ index.php?do=mylinks&amp;add=$1 [L]
+RewriteRule ^pay/([0-9A-Za-z]+)/([0-9]+)(\.html|/)?$ index.php?do=pay&amp;system=$1&amp;cost=$2 [L]
+RewriteRule ^pay/([0-9]+)(\.html|/)?$ index.php?do=pay&amp;cost=$1 [L]
+RewriteRule ^pay(\.html|/)?$ index.php?do=pay [L]
+RewriteRule ^download\.html(.*)$ engine/paidlinks/download.php$1 [L]
+</textarea></div>
+</div>
+</div>
+<div class="footer">
+<hr />
+Copyright &copy; 2008 - 2011 <a style="color:green" href="http://www.kaliostro.net/">kaliostro</a> . All rights reserved.<!-- Copyright (c) 2008 - 2011 www.kaliostro.net. All rights reserved. # -->
+</div>
+</body>
+</html>

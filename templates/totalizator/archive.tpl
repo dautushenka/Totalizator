@@ -1,0 +1,1 @@
+<div align='right'><a href="{link}">Текущий сезон</a>&nbsp;|&nbsp;<a href="{link_archive}">Архив</a></div>

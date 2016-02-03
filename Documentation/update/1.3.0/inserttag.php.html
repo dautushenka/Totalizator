@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Обновление &raquo; 1.3.0 &raquo; engine/inc/inserttag.php &raquo; KALIOSTRO.NET</title>
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body><script language="javascript">
+		if ((window.name != "content") && (navigator.userAgent.indexOf("Opera") <= -1) )
+		document.write("<center><a href='../../index.html?page=update/1.3.0/inserttag.php.html'>show framing</a></center>")
+		</script>
+<div id='wraper'>
+<div class="header_background">
+	<div class="header_div">
+		<div class="module_name">
+			Totalizator(Тотализатор) <span>v2.0.0</span>
+		</div>
+        <div class="navagation">
+        	Обновление &raquo; 1.3.0 &raquo; engine/inc/inserttag.php
+        </div>
+	</div>
+</div>
+<div class="content">
+<!-- Copyright (c) 2008 - 2011 www.kaliostro.net. All rights reserved. # --><div class="action_div">		<b>1.</b> Функция для работы кнопки вставки платного текста в BB кодах<br/>
+		<span class="action_title">Найти</span> (272):<br />
+		<textarea cols="auto" rows="12" class="find" readonly="readonly">function pagelink()
+{
+    var FoundErrors = '';
+	var thesel ='';
+	if ( (ua_vers >= 4) &amp;&amp; is_ie &amp;&amp; is_win)
+	{
+	thesel = document.selection.createRange().text;
+	} else thesel ='$lang[bb_bb_page]';
+
+    if (!thesel) {
+        thesel ='$lang[bb_bb_page]';
+    }</textarea>		
+		<span class="action_title">До вставить</span> :<br />
+		<textarea cols="auto" rows="9" class="addbefore" readonly="readonly">function paidlink()
+{
+	var cost   = prompt("Стоиомсть ссылки");
+	if (cost == null) cost = "0";
+	var days   = prompt("Количество дней доступа");
+	if (days == null) days = "0";
+	
+	doInsert("[pay=" + cost + ":" + days + "]", "[/pay]", true);
+}</textarea></div><div class="action_div">		<b>2.</b> Добавляем саму кнопку<br/>
+		<span class="action_title">Найти</span> (720):<br />
+		<textarea cols="auto" rows="2" class="find" readonly="readonly"><div class="editor_button" onclick=tag_image()><img title="$lang[bb_b_img]" src="engine/skins/bbcodes/images/image.gif" width="23" height="25" border="0"></div></textarea>		
+		<span class="action_title">Ниже добавить</span> :<br />
+		<textarea cols="auto" rows="2" class="add" readonly="readonly"><div class="editor_button" onclick=paidlink()><img title="Платная ссылка" src="engine/paidlinks/images/paid_links_w.jpg" width="23" height="25" border="0"></div></textarea></div>
+</div>
+</div>
+<div class="footer">
+<hr />
+Copyright &copy; 2008 - 2011 <a style="color:green" href="http://www.kaliostro.net/">kaliostro</a> . All rights reserved.<!-- Copyright (c) 2008 - 2011 www.kaliostro.net. All rights reserved. # -->
+</div>
+</body>
+</html>
