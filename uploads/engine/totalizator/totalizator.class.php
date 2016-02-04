@@ -16,22 +16,6 @@ if(!defined('DATALIFEENGINE'))
   die("Hacking attempt!");
 }
 
-define('LIC_DOMAIN', /*lic*/'.'/*/lic*/);
-
-if (
-    !preg_match("#" . LIC_DOMAIN . "#i", $_SERVER['HTTP_HOST']) &&
-    !preg_match('#localhost#i', $_SERVER['HTTP_HOST']) &&
-    strpos($_SERVER['HTTP_HOST'], $_SERVER['SERVER_ADDR']) === false
-    )
-{
-    @header("Content-type: text/html; charset=" . $config['charset']);
-    echo "Вы используете не лицензионную версию модуля Totalizator.<br/>";
-    echo "За информацией обращайтесь на форум <a href='http://forum.kaliostro.net/'>http://forum.kaliostro.net/</a><br/>";
-    echo "You are not using licensed version of the module Totalizator.<br/>";
-    echo "For information, visit the forum <a href='http://forum.kaliostro.net/'>http://forum.kaliostro.net/</a>";
-    exit(); 
-}
-
 class Totalizator
 {
 	protected $tournaments_fields = array( "tournament_id"=> 'int',

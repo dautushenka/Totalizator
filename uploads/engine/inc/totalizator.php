@@ -107,7 +107,6 @@ switch ($action)
                           "Из них не сыграли" => "<font color=\"red\">".$matches_nocalculate['count']."</font>", 
                           "Всего ставок" => $rates['count'], $tpl->line => $tpl->line, 
                           "Версия используемого модуля" => VERSION, 
-                          "Модуль зарегистрирован на" => "<b><a href=\"http://www.$licence\" >". str_replace("\\", "", LIC_DOMAIN) . "<a/></b>", 
                           "Страничка поддержки модуля" => "<a href=\"http://www.kaliostro.net/\" ><b><font color=\"green\" >www.kaliostro.net</font><b></a>"));
 		$tpl->CloseSubtable();
 		$tpl->CloseTable();
